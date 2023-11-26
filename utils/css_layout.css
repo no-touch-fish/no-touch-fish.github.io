@@ -87,7 +87,35 @@
     background: #3D7EB0;
   }
 
-
+  .project {
+    margin-bottom: 20px;
+  }
+  
+  .project-title {
+    font-weight: bold;
+  }
+  
+  .course-code {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .location, .date {
+    color: #666;
+    font-style: italic;
+    margin-left: 10px;
+  }
+  
+  .project-role {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+  
+  .project-details {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  
   /*----------------------------*/
 
     #main{
