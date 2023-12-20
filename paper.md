@@ -7,3 +7,6 @@
 
 2. LLMs based AI agent
 - Voyager
+
+3. AGI and Consisnous 
+- Mikki Said 
