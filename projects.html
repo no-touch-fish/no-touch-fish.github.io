@@ -75,16 +75,29 @@
 <div id="main">
 
   <div class="title">
-    <a class="title_link" id="projects" href="#projects">Projects</a>
+    <a class="title_link" id="projects" href="#projects">Course Projects</a>
   </div>
   
   <div class="content">
-    <div class="project">
+      <div class="project-title">
+        <span class="course-code">ECE408:</span> CUDA Optimization for LeNet
+        <span class="location">Urbana, IL</span>
+        <span class="date">Fall 2024</span>
+      </div>
+      <div class="project-role">Individual Completed</div>
+      <ul class="project-details">
+        <li>Stream: Overlap the data transfer with kernel execution. In this way, I divide large vectors into segments and simultaneously execute a kernel while performing a copy between device and host memory.</li>
+        <li>Kernel Fusion: I first implement convolution with matrix multiplication by three kernel: unrolling kernel, shared matrix multiplication kernel and permute kernel. Then I use kernel fusion to combine three kernels into one kernel for optimization. </li>
+        <li>High-Level Libraries: I use Tensor Cores via Warp Matrix Functions and CUDA Basic Linear Algebra Subprograms (cuBLAS) library.</li>
+        <li>Other optimization: I also make other optmization, such as constant memory for weight matrix, "__restrict__" keyword and loop unrolling.  </li>
+        <!-- <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li> -->
+      </ul>
+      </div>
       <!-- ECE391: Computer Systems Engineering Implementation -->
       <div class="project-title">
         <span class="course-code">ECE391:</span> Computer Systems Engineering Implementation
         <span class="location">Urbana, IL</span>
-        <span class="date">Sep 2023 - Dec 2023</span>
+        <span class="date">Fall 2023</span>
       </div>
       <div class="project-role">Group member of Four-member Team</div>
       <ul class="project-details">
@@ -95,7 +108,7 @@
           provided by the course. Furthermore, realized single CPU task scheduling and multiple terminals switching. </li>
         <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li>
       </ul>
-    </div>
+      </div>
   
   </div>
 
