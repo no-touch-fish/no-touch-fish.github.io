@@ -80,37 +80,105 @@
     <a class="title_link" id="research" href="#research"> Research Experience</a>
   </div>
   <div class="content">
-    <div class="project">
-      <div class="project-title">
-        Galaxy Federated Learning Framework
-        <span class="location">ZJU, China</span>
-      </div>
-      <div class="project-role">
-        Research Contributor, Advisor: Chao Wu (ZJU Professor)
-        <span class="date">Jun 2022 - Aug 2022</span>
-      </div>
-      <ul class="project-details">
-        <li>Explore a possible method to obtain training data for machine learning from clients with privacy protections </li>
-        <li>Help adding functions for monitoring the status of CPU and GPU while running the program</li>
-        <li>Debug the data transporting process so that the model can be delivered and trained</li>
-		<div class="linebreak"></div>
-      </ul>
-    </div>
-  <!-- LLM attack -->
+  <!-- Federal KAG -->
   <div class="project">
     <div class="project-title">
-      Attack llama2 and llama3 with gradient method
+      Federated Knowledge-Augmented Generation
+      <span class="location">ZJU-UIUC Institute, China</span>
+    </div>
+    <div class="project-role">
+      Advisor: Qiang Zhang (ZJUI Professor)
+      <span class="date">Jun 2024 - Current</span>
+    </div>
+    <ul class="project-details">
+      <li><strong>Motivation:</strong> The goal is to develop a personalized and privacy-preserving text generation systems based on large langauge models. 
+        Federated Learning enables training machine learning models across multiple devices or servers without sharing raw data. Knowledge-Augmented Generation (KAG) combines retrieval and generation components to enhance text generation tasks.
+      </li>
+	  <div class="linebreak"></div>
+	</ul>
+  </div>
+  <!-- Teaching Large Language Models to Handle the Composition of Multiple Problems Simultaneously -->
+  <div class="project">
+    <div class="project-title">
+      Teaching Large Language Models to Handle the Composition of Multiple Problems Simultaneously
+      <span class="location">Remote</span>
+    </div>
+    <div class="project-role">
+      Advisor: May Fung (HKUST Professor)
+      <span class="date">Jun 2024 - Current</span>
+    </div>
+    <ul class="project-details">
+      <li><strong>Motivation:</strong> Current evaluation of LLM hallucination only focus on single problem setting. 
+        Because of this, we investigate how LLM perform and deal with hallucination under multiple problem setting, where it need to response to multiple questions simultaneously.
+      </li>
+      <li><strong>Result:</strong> We propose a novel fine-tune method called  Multiple Answers and Confidence Stepwise Tuning (<strong>MAC-Tuning</strong>) with up to 12% improvement comparing with baseline and up to 40\% improvement comparing with Zero-shot model under multiple problem setting.
+      </li>
+      <li>I conduct the entire process of data collection and building the project code. 
+        At the same time,  I tested various approaches, like LLM-Judge and keyword extraction, to assess the accuracy of LLM-generated outputs. 
+        Furthermore, I experimented diverse evaluation metrics including accuracy, AP score and MAP to comprehensively evaluate model performance.
+      </li>
+	  <div class="linebreak"></div>
+	</ul>
+  </div>
+  <!-- Simple Random Augmentation -->
+  <div class="project">
+    <div class="project-title">
+      Random Augmentations Cheaply Break LLM Safety Alignment
       <span class="location">UIUC, America</span>
     </div>
     <div class="project-role">
-      Research Contributor, Advisor: Gagandeep Singh (UIUC Professor), Jason Vega (UIUC Ph.D)
+      Advisor: Gagandeep Singh (UIUC Professor), Jason Vega (UIUC Ph.D)
+      <span class="date">Jun 2024 - Dec 2024</span>
+    </div>
+    <ul class="project-details">
+      <li><strong>Motivation:</strong> Current jailbreak methods are rather costly or involve a non-trivial amount of creativity and effort. 
+        Since that, we investigate how simple random augmentations to the input prompt affect safety alignment effectiveness in LLMs from different dimensions, 
+        including augmentation type, model size, quantization, fine-tuning-based defenses and decoding strategies.
+      </li>
+      <li><strong>Result:</strong> We show that low-resource and unsophisticated attackers can significantly improve their chances of bypassing alignment with just 25 random augmentations per prompt.
+      </li>
+      <li><strong>Contribution:</strong> I research and implement different simple data augmentations, including string level and character level. 
+        At the same time, I help to check the evaluation metric of the project and do case study as well as labeling the experimental result manually to see how LLM classification align with human evaluation.</li>
+	  <div class="linebreak"></div>
+	</ul>
+  </div>
+  <!-- LLM attack -->
+  <div class="project">
+    <div class="project-title">
+      LLM Attack Based on Gradient Method
+      <span class="location">UIUC, America</span>
+    </div>
+    <div class="project-role">
+      Advisor: Gagandeep Singh (UIUC Professor), Jason Vega (UIUC Ph.D)
       <span class="date">Jan 2024 - Jun 2024</span>
     </div>
     <ul class="project-details">
-      <li>Finding a more efficient and stronger way to attack Llama2.</li>
-      <li>Based on GCG attack and priming attack, we find "ignore" string to attack Llama2-7B and Llama2-13B with 97% ASR.</li>
+      <li><strong>Motivation:</strong> If we can decide the very first output part of LLM generation (which is "<strong><a href="https://arxiv.org/abs/2312.12321">prefilling attack</a>prefilling attack</strong>"), we can easily bypass the safety training of LLMs. 
+        One of the easiest way to do so is utilizing the Greedy Coordinate Gradient (<strong><a href="https://arxiv.org/abs/2307.15043">GCG</a></strong>) attack to find the "ignore string" to ignore the "ending token" that separates the input prompt and LLM generation.
+        Also, we can briefly give an explanation to the random string that is generated by gradient method, compared with random token in GCG attack.
+      </li>
+      <li><strong>Result:</strong> We attack LLaMA2-7B and LLaMA2-13B with 97% attack successful rate.
+      </li>
+      <li><strong>Contribution:</strong> I develop the code to find "ignore string" based on <strong>GCG</strong> attack and try different loss functions as well as different place to insert the string.</li>
 	  <div class="linebreak"></div>
 	</ul>
+  </div>
+  <!-- Galaxy Federated Learning Framework -->
+  <div class="project">
+    <div class="project-title">
+      Galaxy Federated Learning Framework
+      <span class="location">ZJU, China</span>
+    </div>
+    <div class="project-role">
+      Advisor: Chao Wu (ZJU Professor)
+      <span class="date">Jun 2022 - Aug 2022</span>
+    </div>
+    <ul class="project-details">
+      <li>Explore a possible method to obtain training data for machine learning from clients with privacy protections </li>
+      <li>Help adding functions for monitoring the status of CPU and GPU while running the program</li>
+      <li>Debug the data transporting process so that the model can be delivered and trained</li>
+  <div class="linebreak"></div>
+    </ul>
   </div>
 </div>
 
