@@ -79,6 +79,24 @@
   </div>
   
   <div class="content">
+    <!-- ECE445: Senior Design Labtoratory -->
+    <div class = "project">
+      <div class="project-title">
+        <span class="course-code">ECE445:</span> Senior Design Labtoratory
+        <span class="location">Haining, Zhejiang</span>
+        <span class="date">SPRING 2025</span>
+      </div>
+      <div class="project-role">Group member of Four-member Team</div>
+      <ul class="project-details">
+        <li>Goal: Grasping Any Object with Robotic Arms with Language Instructions </li>
+        <li>Automatic Speech Recognition: Translate human-language input into a string and identify the name of the target object. We use Wave2Vec 2.0 as the ASR model and add a NLP model after this to extract the label. </li>
+        <li>Computer Vision: Use the RGB image taken from the depth camera, identify the target object using a detection box of pixel-level coordinate. We use YOLOE-V8L. </li>
+        <li>6D-Pose Generator: Utilize both RGB image and depth image from the depth camera, determine the 6D coordinate, [x,y,z] and three Euler angles for the object in the detection box. We use Open-3D.</li>
+        <li>Path Translator: Use the 6D coordinate of the target object to choose the optimal grasping position, and map the position to a set of destination angles of the motors.</li>
+        <li>PCB Display: Display the name of the target object on a 0.96-inch OLED screen.</li>
+        <li><a href="https://github.com/FFFFFFFANG1/ST_agent" >Code</a> and <a href="/files/ECE445_final_report.pdf" download>report</a> is provided here.</li>
+      </ul>
+    </div>
     <!-- ECE408: CUDA Optimization for LeNet -->
     <div class = "project">
       <div class="project-title">
@@ -95,12 +113,12 @@
         <!-- <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li> -->
       </ul>
     </div>
-      <!-- ECE391: Computer Systems Engineering Implementation -->
-      <div class = "project">
+    <!-- ECE391: Computer Systems Engineering Implementation -->
+    <div class = "project">
       <div class="project-title">
-        <span class="course-code">ECE391:</span> Computer Systems Engineering Implementation
-        <span class="location">Urbana, IL</span>
-        <span class="date">Fall 2023</span>
+      <span class="course-code">ECE391:</span> Computer Systems Engineering Implementation
+      <span class="location">Urbana, IL</span>
+      <span class="date">Fall 2023</span>
       </div>
       <div class="project-role">Group member of Four-member Team</div>
       <ul class="project-details">
@@ -111,7 +129,7 @@
           provided by the course. Furthermore, realized single CPU task scheduling and multiple terminals switching. </li>
         <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li>
       </ul>
-      </div>
+    </div>
   </div>
 
   <div class="title">
