@@ -77,115 +77,67 @@
 <div id="main">
 
   <div class="title">
-    <a class="title_link" id="research" href="#research"> Research Experience</a>
+    <a class="title_link" id="research" href="#research">Research Experience</a>
   </div>
   <div class="content">
-  <!-- Federal KAG -->
+  <!-- SAFTAC -->
   <div class="project">
     <div class="project-title">
-      Federated Knowledge-Augmented Generation
-      <span class="location">ZJU-UIUC Institute, China</span>
+      SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design
+      <span class="location">UIUC, Urbana, IL</span>
     </div>
     <div class="project-role">
-      Advisor: Qiang Zhang (ZJUI Professor)
-      <span class="date">Feb 2025 - Jun 2025</span>
+      Advisor: Huan Zhang
+      <span class="date">2025 - Present</span>
     </div>
     <ul class="project-details">
-      <li><strong>Motivation:</strong> The goal is to develop a personalized and privacy-preserving text generation systems based on large langauge models. 
-        Federated Learning enables training machine learning models across multiple devices or servers without sharing raw data. Knowledge-Augmented Generation (KAG) combines retrieval and generation components to enhance text generation tasks.
+      <li><strong>Motivation:</strong> This project studies post-training open-source LLMs for specification-conditioned analog circuit design, where models must reason over circuit structure, constraints, and simulation feedback.
       </li>
-      <li><strong>Result:</strong> We propose a novel Federated KAG framework that integrates Federated Learning and Knowledge-Augmented Generation, enabling personalized text generation while preserving data privacy.
+      <li><strong>Result:</strong> We constructed a simulation-grounded dataset of 8,626 design tasks across 10 analog circuit types and fine-tuned Qwen3-8B to achieve 71.4% single-pass pass@1 and 78.2% two-pass pass@1, outperforming strong proprietary and open-source baselines.
       </li>
-      <li><strong>Contribution:</strong> I conduct the entire process of data collection and building the project code based on LightRAG.
+      <li><strong>Contribution:</strong> I led the project design, built the dataset and training pipeline, designed a three-stage SFT curriculum, and implemented a GRPO-based reinforcement fine-tuning pipeline using topology checks, BO-based sizing, and SPICE simulation outcomes as reward signals.
       </li>
-      <li><strong>Link: </strong> <a href="https://github.com/no-touch-fish/FKAG" >Github Repo</a>.</li>
-      </li>
-	  <div class="linebreak"></div>
-	</ul>
+      <div class="linebreak"></div>
+    </ul>
   </div>
-  <!-- Teaching Large Language Models to Handle the Composition of Multiple Problems Simultaneously -->
+  <!-- MAC-Tuning -->
   <div class="project">
     <div class="project-title">
-      Teaching Large Language Models to Handle the Composition of Multiple Problems Simultaneously
+      MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness
       <span class="location">Remote</span>
     </div>
     <div class="project-role">
-      Advisor: May Fung (HKUST Professor)
+      Advisor: May Fung
       <span class="date">Jun 2024 - Current</span>
     </div>
     <ul class="project-details">
-      <li><strong>Motivation:</strong> Current evaluation of LLM hallucination only focus on single problem setting. 
-        Because of this, we investigate how LLM perform and deal with hallucination under multiple problem setting, where it need to response to multiple questions simultaneously.
+      <li><strong>Motivation:</strong> Existing evaluations of LLM hallucination mostly focus on single-question settings. This project studies hallucination detection and reasoning when models must answer multiple compositional questions at the same time.
       </li>
-      <li><strong>Result:</strong> We propose a novel fine-tune method called  Multiple Answers and Confidence Stepwise Tuning (<strong>MAC-Tuning</strong>) with up to 12% improvement comparing with baseline and up to 40\% improvement comparing with Zero-shot model under multiple problem setting.
+      <li><strong>Result:</strong> We proposed Multiple Answers and Confidence Stepwise Tuning (<strong>MAC-Tuning</strong>), a fine-tuning method that improves answer precision by an average of 25%. The paper was admitted to EMNLP 2025 Main.
       </li>
-      <li><strong>Contribution:</strong> I conduct the entire process of data collection and building the project code. 
-        At the same time,  I tested various approaches, like LLM-Judge and keyword extraction, to assess the accuracy of LLM-generated outputs. 
-        Furthermore, I experimented diverse evaluation metrics including accuracy, AP score and MAP to comprehensively evaluate model performance.
+      <li><strong>Contribution:</strong> I led the data collection and training pipeline, including multi-problem prompt construction, model fine-tuning, and output evaluation. I also designed evaluation metrics including accuracy, AP, and MAP, implemented automatic evaluation with LLM-as-a-judge and keyword-based extraction, and manually verified selected cases for reliability.
       </li>
-      <li><strong>Link: </strong> <a href="https://github.com/no-touch-fish/Multi-QA-Tuning" >Github Repo</a> and <a href="https://arxiv.org/abs/2504.21773">Paper</a>.</li>
-      </li>
-	  <div class="linebreak"></div>
-	</ul>
+      <li><strong>Link: </strong> <a href="https://github.com/no-touch-fish/Multi-QA-Tuning">Github Repo</a> and <a href="https://arxiv.org/abs/2504.21773">Paper</a>.</li>
+      <div class="linebreak"></div>
+    </ul>
   </div>
   <!-- Simple Random Augmentation -->
   <div class="project">
     <div class="project-title">
       Random Augmentations Cheaply Break LLM Safety Alignment
-      <span class="location">UIUC, America</span>
+      <span class="location">UIUC, Urbana, IL</span>
     </div>
     <div class="project-role">
-      Advisor: Gagandeep Singh (UIUC Professor), Jason Vega (UIUC Ph.D)
+      Advisor: Gagandeep Singh, Jason Vega
       <span class="date">Jun 2024 - Dec 2024</span>
     </div>
     <ul class="project-details">
-      <li><strong>Motivation:</strong> Current jailbreak methods are rather costly or involve a non-trivial amount of creativity and effort. 
-        Since that, we investigate how simple random augmentations to the input prompt affect safety alignment effectiveness in LLMs from different dimensions, 
-        including augmentation type, model size, quantization, fine-tuning-based defenses and decoding strategies.
+      <li><strong>Motivation:</strong> Many jailbreak methods are costly or require substantial manual effort. This project studies whether simple random prompt augmentations can weaken safety alignment in LLMs.
       </li>
       <li><strong>Result:</strong> We show that low-resource and unsophisticated attackers can significantly improve their chances of bypassing alignment with just 25 random augmentations per prompt.
       </li>
-      <li><strong>Contribution:</strong> I research and implement different simple data augmentations, including string level and character level. 
-        At the same time, I help to check the evaluation metric of the project and do case study as well as labeling the experimental result manually to see how LLM classification align with human evaluation.</li>
-	  <div class="linebreak"></div>
-	</ul>
-  </div>
-  <!-- LLM attack -->
-  <div class="project">
-    <div class="project-title">
-      LLM Attack Based on Gradient Method
-      <span class="location">UIUC, America</span>
-    </div>
-    <div class="project-role">
-      Advisor: Gagandeep Singh (UIUC Professor), Jason Vega (UIUC Ph.D)
-      <span class="date">Jan 2024 - Jun 2024</span>
-    </div>
-    <ul class="project-details">
-      <li><strong>Motivation:</strong> If we can decide the very first output part of LLM generation (which is "<strong><a href="https://arxiv.org/abs/2312.12321">prefilling attack</a></strong>"), we can easily bypass the safety training of LLMs. 
-        One of the easiest way to do so is utilizing the Greedy Coordinate Gradient (<strong><a href="https://arxiv.org/abs/2307.15043">GCG</a></strong>) attack to find the "ignore string" to ignore the "ending token" that separates the input prompt and LLM generation.
-        Also, we can briefly give an explanation to the random string that is generated by gradient method, compared with random token in GCG attack.
-      </li>
-      <li><strong>Result:</strong> We attack LLaMA2-7B and LLaMA2-13B with 97% attack successful rate.
-      </li>
-      <li><strong>Contribution:</strong> I develop the code to find "ignore string" based on <strong>GCG</strong> attack and try different loss functions as well as different place to insert the string.</li>
-	  <div class="linebreak"></div>
-	</ul>
-  </div>
-  <!-- Galaxy Federated Learning Framework -->
-  <div class="project">
-    <div class="project-title">
-      Galaxy Federated Learning Framework
-      <span class="location">ZJU, China</span>
-    </div>
-    <div class="project-role">
-      Advisor: Chao Wu (ZJU Professor)
-      <span class="date">Jun 2022 - Aug 2022</span>
-    </div>
-    <ul class="project-details">
-      <li>Explore a possible method to obtain training data for machine learning from clients with privacy protections </li>
-      <li>Help adding functions for monitoring the status of CPU and GPU while running the program</li>
-      <li>Debug the data transporting process so that the model can be delivered and trained</li>
-  <div class="linebreak"></div>
+      <li><strong>Contribution:</strong> I implemented and evaluated multiple low-cost input augmentation strategies, including string-level and character-level perturbations. I also helped design the evaluation metrics, manually labeled model outputs, and conducted case studies comparing LLM-based safety classification with human evaluation.</li>
+      <div class="linebreak"></div>
     </ul>
   </div>
 </div>
@@ -199,13 +151,17 @@
     <ul>
       <li>
           Jason Vega, <strong>Junsheng Huang</strong>*, Gaokai Zhang*, Hangoo Kang*, Minjia Zhang, Gagandeep Singh. 
-          <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em> 
-          Under Review.
+          <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em>
       </li>
       <li>
           <strong>Junsheng Huang</strong>, Zhitao He, Sandeep Polisetty, May Fung. 
-          <em>Teaching Large Language Models to Handle the Composition of Multiple Problems Simultaneously.</em> 
-          Under Review.
+          <em><a href="https://arxiv.org/abs/2504.21773">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness.</a></em>
+          Admitted to EMNLP 2025 Main.
+      </li>
+      <li>
+          <strong>Junsheng Huang</strong>, Yifan Sun, Zhouer Zhang, Ning Wei, Yening Liu, Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu, Huan Zhang.
+          <em>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design.</em>
+          Manuscript under review.
       </li>
   </ul>
   </div>

@@ -75,49 +75,41 @@
 <div id="main">
 
   <div class="title">
-    <a class="title_link" id="projects" href="#projects">Course Projects</a>
+    <a class="title_link" id="projects" href="#projects">Projects</a>
   </div>
   
   <div class="content">
-    <!-- Federal KAG -->
-  <div class="project">
-    <div class="project-title">
-      Federated Knowledge-Augmented Generation
-      <span class="location">ZJU-UIUC Institute, China</span>
-    </div>
-    <div class="project-role">
-      Advisor: Qiang Zhang (ZJUI Professor)
-      <span class="date">Feb 2025 - Jun 2025</span>
-    </div>
-    <ul class="project-details">
-      <li><strong>Motivation:</strong> The goal is to develop a personalized and privacy-preserving text generation systems based on large langauge models. 
-        Federated Learning enables training machine learning models across multiple devices or servers without sharing raw data. Knowledge-Augmented Generation (KAG) combines retrieval and generation components to enhance text generation tasks.
-      </li>
-      <li><strong>Result:</strong> We propose a novel Federated KAG framework that integrates Federated Learning and Knowledge-Augmented Generation, enabling personalized text generation while preserving data privacy.
-      </li>
-      <li><strong>Contribution:</strong> I conduct the entire process of data collection and building the project code based on LightRAG.
-      </li>
-      <li><strong>Link: </strong> <a href="https://github.com/no-touch-fish/FKAG" >Github Repo</a>.</li>
-      </li>
-	  <div class="linebreak"></div>
-	</ul>
-  </div>
-    <!-- ECE445: Senior Design Labtoratory -->
+    <!-- Federated KAG -->
     <div class = "project">
       <div class="project-title">
-        <span class="course-code">ECE445:</span> Senior Design Labtoratory
+        Federated Knowledge-Augmented Generation
         <span class="location">ZJU-UIUC Institute, China</span>
-        <span class="date">SPRING 2025</span>
+        <span class="date">Spring 2025</span>
       </div>
-      <div class="project-role">Group member of Four-member Team</div>
+      <div class="project-role">Advisor: Qiang Zhang</div>
       <ul class="project-details">
-        <li><strong>Goal:</strong> Grasping Any Object with Robotic Arms with Language Instructions </li>
-        <li><strong>Automatic Speech Recognition:</strong> Translate human-language input into a string and identify the name of the target object. We use Wave2Vec 2.0 as the ASR model and add a NLP model after this to extract the label. </li>
-        <li><strong>Computer Vision:</strong> Use the RGB image taken from the depth camera, identify the target object using a detection box of pixel-level coordinate. We use YOLOE-V8L. </li>
-        <li><strong>6D-Pose Generator:</strong> Utilize both RGB image and depth image from the depth camera, determine the 6D coordinate, [x,y,z] and three Euler angles for the object in the detection box. We use Open-3D.</li>
-        <li><strong>Path Translator:</strong> Use the 6D coordinate of the target object to choose the optimal grasping position, and map the position to a set of destination angles of the motors.</li>
+        <li><strong>Goal:</strong> Built a privacy-preserving and personalized text generation framework by combining federated learning with knowledge-augmented generation.</li>
+        <li><strong>Method:</strong> Designed a federated KAG pipeline that enables distributed training across clients without sharing raw data, while using retrieval-augmented knowledge to improve generation quality.</li>
+        <li><strong>Contribution:</strong> Collected data, built the project codebase based on LightRAG, and implemented the core training and generation pipeline.</li>
+        <li><strong>Link:</strong> <a href="https://github.com/no-touch-fish/FKAG">Github Repo</a>.</li>
+      </ul>
+    </div>
+    <!-- ECE445: Senior Design Laboratory -->
+    <div class = "project">
+      <div class="project-title">
+        <span class="course-code">ECE445:</span> Senior Design Laboratory
+        <span class="location">ZJU-UIUC Institute, China</span>
+        <span class="date">Spring 2025</span>
+      </div>
+      <div class="project-role">Member of a four-person team</div>
+      <ul class="project-details">
+        <li><strong>Goal:</strong> Built a language-guided robotic grasping system that identifies and grasps target objects from spoken instructions.</li>
+        <li><strong>Automatic Speech Recognition:</strong> Translated spoken instructions into text and extracted the target object label using Wave2Vec 2.0 followed by an NLP model.</li>
+        <li><strong>Computer Vision:</strong> Used RGB images from the depth camera to detect the target object and estimate its pixel-level bounding box with YOLOE-V8L.</li>
+        <li><strong>6D Pose Estimation:</strong> Combined RGB and depth images to estimate the target object's 6D pose, including [x, y, z] coordinates and three Euler angles, using Open3D.</li>
+        <li><strong>Motion Planning:</strong> Used the estimated 6D pose to choose an appropriate grasping position and map it to motor destination angles.</li>
         <li><strong>PCB Display:</strong> Display the name of the target object on a 0.96-inch OLED screen.</li>
-        <li><a href="https://github.com/FFFFFFFANG1/ST_agent" >Code</a> and <a href="/files/ECE445_final_report.pdf" download>report</a> is provided here.</li>
+        <li><a href="https://github.com/FFFFFFFANG1/ST_agent">Code</a> and <a href="/files/ECE445_final_report.pdf" download>report</a> are available here.</li>
       </ul>
     </div>
     <!-- ECE408: CUDA Optimization for LeNet -->
@@ -127,30 +119,27 @@
         <span class="location">Urbana, IL</span>
         <span class="date">Fall 2024</span>
       </div>
-      <div class="project-role">Individual Completed</div>
+      <div class="project-role">Individual project</div>
       <ul class="project-details">
-        <li><strong>Stream:</strong> Overlap the data transfer with kernel execution. In this way, I divide large vectors into segments and simultaneously execute a kernel while performing a copy between device and host memory.</li>
-        <li><strong>Kernel Fusion:</strong> I first implement convolution with matrix multiplication by three kernel: unrolling kernel, shared matrix multiplication kernel and permute kernel. Then I use kernel fusion to combine three kernels into one kernel for optimization. </li>
-        <li><strong>High-Level Libraries:</strong> I use Tensor Cores via Warp Matrix Functions and CUDA Basic Linear Algebra Subprograms (cuBLAS) library.</li>
-        <li><strong>Other optimization:</strong> I also make other optmization, such as constant memory for weight matrix, "__restrict__" keyword and loop unrolling.  </li>
-        <!-- <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li> -->
+        <li><strong>Streaming:</strong> Overlapped data transfer with kernel execution by dividing large vectors into segments and running kernels while copying data between device and host memory.</li>
+        <li><strong>Kernel Fusion:</strong> Implemented convolution with matrix multiplication using three kernels, then fused them into a single kernel to reduce overhead and improve performance.</li>
+        <li><strong>High-Level Libraries:</strong> Used Tensor Cores through Warp Matrix Functions and the cuBLAS library.</li>
+        <li><strong>Other Optimizations:</strong> Applied constant memory for weights, the <code>__restrict__</code> keyword, and loop unrolling.</li>
       </ul>
     </div>
     <!-- ECE391: Computer Systems Engineering Implementation -->
     <div class = "project">
       <div class="project-title">
-      <span class="course-code">ECE391:</span> Computer Systems Engineering Implementation
+      <span class="course-code">ECE391:</span> 391 OS System
       <span class="location">Urbana, IL</span>
       <span class="date">Fall 2023</span>
       </div>
-      <div class="project-role">Group member of Four-member Team</div>
+      <div class="project-role">Member of a four-person team</div>
       <ul class="project-details">
-        <li>Constructed a Linux-like operating system kernel with C, having basic function such as paging virtual 
-          memory, fully functional IDT, GDT and i8259-based interrupt controller, etc.</li>
-        <li>Constructed a file system, operating device driver such as Real Time Clock, keyboard, Programmable Interval Timer and ATA driver. </li>
-        <li>Used x86 to establish the system call linkage between user-level program and kernel, passing all test cases 
-          provided by the course. Furthermore, realized single CPU task scheduling and multiple terminals switching. </li>
-        <li>Full point for the overall <a href="https://github.com/no-touch-fish/ECE391" >5-checkpoints project</a>.</li>
+        <li><strong>Basic Functionalities:</strong> Implemented an operating system supporting scheduling, interrupts, system calls, exceptions, and file systems.</li>
+        <li><strong>Self-Designed Features:</strong> Added ATA drivers for a writable file system, command history, customizable colors, and autocomplete.</li>
+        <li><strong>Systems Programming:</strong> Built the kernel and device-driver stack in C and x86, including paging, interrupt handling, terminal support, and course-provided machine problem interfaces.</li>
+        <li><a href="https://github.com/no-touch-fish/ECE391">Project repository</a>.</li>
       </ul>
     </div>
   </div>
@@ -160,7 +149,7 @@
   </div>
   <div class="content">
     <ul>
-      <li>The Mathematical Contest in Modeling - Honorable Mention (Second Prize) Winner  <div class="float-right">2023</div></li>
+      <li>Mathematical Contest in Modeling, Honorable Mention <div class="float-right">2023</div></li>
       <li>ZJU-UIUC Institute Dean's List  <div class="float-right">2022-2024</div></li>
       <li>ZJU-UIUC Institute Third-Class Academic Excellence Award (three times)  <div class="float-right">2022-2024</div></li>
       <li>UIUC Grainger Engineering Department Dean's List  <div class="float-right">2023-2024</div></li>
