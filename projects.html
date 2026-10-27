@@ -79,6 +79,19 @@
   </div>
   
   <div class="content">
+    <!-- Outcome-Conditioned On-Policy Distillation -->
+    <div class="project" id="opd">
+      <div class="project-title">
+        Outcome-Conditioned On-Policy Distillation for Multi-Step LLM Agents
+      </div>
+      <div class="project-role">Ongoing research</div>
+      <ul class="project-details">
+        <li><strong>Goal:</strong> Investigating how to transfer multi-step decision-making capabilities from strong teacher models to smaller, cost-efficient agents through on-policy distillation (OPD), where students learn from teacher supervision on their own interaction trajectories.</li>
+        <li><strong>Supervision Allocation:</strong> Developing an outcome-conditioned framework that separates successful and failed trajectories, allocates a limited supervision budget between them, and selects informative interaction turns and tokens for distillation.</li>
+        <li><strong>Selection Strategy:</strong> Studying teacher-student disagreement and interaction position to reinforce effective behavior in successful trajectories and prioritize corrective supervision in failed trajectories, while reducing emphasis on downstream deviations caused by accumulated errors.</li>
+        <li><strong>Evaluation:</strong> Evaluating the approach on ALFWorld and WebShop across teacher-student configurations through budget-matched baseline comparisons, component ablations, and trajectory-level analyses.</li>
+      </ul>
+    </div>
     <!-- CS598HT: Consistency-Aware Graph Memory for Training-Free VLM Test-Time Adaptation -->
     <div class = "project">
       <div class="project-title">
