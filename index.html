@@ -56,7 +56,7 @@
       <i class="icon icon-th icon-white"></i> &nbsp; Publications
     </a>
     <a class="nav_item" href="./teaching.html#teaching">
-      <i class="icon icon-user icon-white"></i> &nbsp; Teaching
+      <i class="icon icon-user icon-white"></i> &nbsp; Teaching &amp; Leadership
     </a>
   </div>
 </div>
@@ -72,7 +72,7 @@
     I am currently pursuing an M.S. in Electrical and Computer Engineering at the <a href="https://illinois.edu/index.html">University of Illinois Urbana-Champaign</a>, where I started in Fall 2025 and expect to graduate in May 2027.
     Prior to this, I earned dual bachelor's degrees in Electrical and Computer Engineering from the <a href="https://illinois.edu/index.html">University of Illinois Urbana-Champaign</a> and <a href="https://www.zju.edu.cn/english/">Zhejiang University</a> in 2025.
     <div class="linebreak"></div>
-    I am actively seeking Ph.D. opportunities in machine learning and large language models.
+    I am actively seeking Ph.D. opportunities in machine learning, large language models, and autonomous agents.
     <div class="linebreak"></div>
     Feel free to look at my <a href="/files/CV.pdf" download>CV</a>!
   </div>
@@ -81,11 +81,11 @@
     <a class="title_link" id="interest" href="#interest">Research Interests</a>
   </div>
   <div class="content">
-    I am currently interested in LLM agents, LLM post-training, trustworthy LLMs, and LLMs for engineering applications. My recent work spans agent design, post-training, safety, reasoning, and engineering-oriented adaptation for large language models.
+    My research focuses on how LLMs and autonomous agents can learn and improve from feedback and experience. I am particularly interested in:
     <ul>
-      <li>LLM agents for multi-turn planning, reasoning, and strategic interaction.</li>
-      <li>LLM post-training and alignment, including supervised fine-tuning, reinforcement learning, reward design, and domain-specific adaptation.</li>
-      <li>Trustworthy and engineering-oriented LLMs, including safety, hallucination mitigation, and applications to various engineering tasks.</li>
+      <li>Post-training methods for improving reasoning and decision-making.</li>
+      <li>Recursive self-improvement (RSI) that enables agents to learn from multi-step interactions and experimental outcomes.</li>
+      <li>Autonomous agents that can advance scientific discovery and solve complex engineering problems.</li>
     </ul>
   </div>
 
@@ -95,12 +95,14 @@
   <div class="content">
     <ul>
       <li>
-        <span class="title"><strong>University of Illinois at Urbana-Champaign</strong></span> <div class="float-right time">Aug. 2025 - May. 2027 (expected)</div>
-        <div class="info">M.S. in Electrical and Computer Engineering</div>
+        <span class="title"><strong>University of Illinois Urbana-Champaign</strong></span> <div class="float-right time">Aug. 2025 - May 2027 (expected)</div>
+        <div class="info">M.S. in Electrical and Computer Engineering (GPA: 3.91/4.00)</div>
+        <div class="info">Relevant courses: Reinforcement Learning (ECE586), Natural Language Processing (CS546), Computer Vision (CS543), Graph Machine Learning (CS598).</div>
       </li>
       <li>
         <span class="title"><strong>Zhejiang University - University of Illinois Urbana-Champaign</strong></span> <div class="float-right time">Aug. 2021 - Jun. 2025</div>
-        <div class="info">Dual Bachelor's Degrees in Electrical and Computer Engineering (UIUC GPA: 4.00/4.00, ZJU GPA: 3.97/4.00)</div>
+        <div class="info">Dual Bachelor's Degrees in Electrical and Computer Engineering (GPA: 3.96/4.00)</div>
+        <div class="info">Relevant courses: Computer Systems Engineering (ECE391), Data Structures (CS225), Artificial Intelligence (CS440), Algorithms (CS374), Machine Learning (CS446), Applied Parallel Programming (ECE408).</div>
       </li>
     </ul>
   </div>
@@ -111,6 +113,12 @@
   <div class="content">
     <ul>
       <li>
+        <span class="label label-info">2026</span> Our paper <em>SAFTAC</em> was accepted to NeurIPS 2026 Main Conference.
+      </li>
+      <li>
+        <span class="label label-info">08/2026</span> Became a Teaching Assistant for ECE484 (Principles of Safe Autonomy) at UIUC.
+      </li>
+      <li>
         <span class="label label-info">01/2026</span> Became a Teaching Assistant for CS446/ECE449 (Machine Learning) at UIUC.
       </li>
       <li>
@@ -120,13 +128,13 @@
         <span class="label label-info">08/2025</span> Started my M.S. in Electrical and Computer Engineering at UIUC.
       </li>
       <li>
-        <span class="label label-info">02/2025</span> Became a Teaching Assistant for MATH285 (Introduction to Differential Equations) at ZJUI.
+        <span class="label label-info">01/2025</span> Became a Teaching Assistant for MATH285 (Introduction to Differential Equations) at ZJUI.
       </li>
       <li>
         <span class="label label-info">09/2024</span> Became a Teaching Assistant for MATH241 (Calculus III) at ZJUI.
       </li>
       <li>
-        <span class="label label-info">02/2024</span> Became a Course Assistant for ECE391 (Computer System Engineering) at UIUC.
+        <span class="label label-info">01/2024</span> Became a Course Assistant for ECE391 (Computer System Engineering) at UIUC.
       </li>
     </ul>
   </div>
@@ -135,32 +143,41 @@
     <a class="title_link" id="publications" href="#publications">Publications</a>
   </div>
   <div class="content">
-    Here are my recent publications. Please see <a href="./research.html#publications">Research</a> for more information. <br>
+    Please see <a href="./research.html#publications">Research</a> for more information.<br>
     (* denotes equal contribution)
+
     <ul>
       <li>
-          <strong>Junsheng Huang</strong>, Yifan Sun, Zhouer Zhang, Ning Wei, Yening Liu, Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu, Huan Zhang.
-          <em>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design.</em>
-          Manuscript under review.
+        <strong>Junsheng Huang</strong>*, Yifan Sun*, Zhouer Zhang*, Ning Wei, Yening Liu, Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu, Huan Zhang.
+        <em>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design.</em>
+        Accepted to <strong>NeurIPS 2026 Main Conference</strong>.
       </li>
       <li>
-          <strong>Junsheng Huang</strong>, Zhitao He, Sandeep Polisetty, May Fung. 
-          <em><a href="https://arxiv.org/abs/2504.21773">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness.</a></em> 
-          Accepted to EMNLP 2025 Main.
+        <strong>Junsheng Huang</strong>, Zhitao He, Yuchen Huang, Sandeep Polisetty, Qingyun Wang, Yi R. Fung.
+        <em><a href="https://arxiv.org/abs/2504.21773">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness.</a></em>
+        Accepted to <strong>EMNLP 2025 Main Conference</strong>.
       </li>
       <li>
-          Jason Vega, <strong>Junsheng Huang</strong>*, Gaokai Zhang*, Hangoo Kang*, Minjia Zhang, Gagandeep Singh. 
-          <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em> 
+        Jason Vega, <strong>Junsheng Huang</strong>, Gaokai Zhang, Hangoo Kang, Minjia Zhang, Gagandeep Singh.
+        <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em>
+        Preprint.
       </li>
-  </ul>
+      <li>
+        W. Yan, Z. Deng, M. Molter, R. Krishna, N. Rouf, S. S. Sofla, E. Thieme, S. Chatterjee, P. P. P. Linn, Y. Wen, X. Xiao, Z. Zhang,
+        <strong>Junsheng Huang</strong>, Y. Liu, Y. Zhou, P. Franzon, M. Swaminathan, E. Rosenbaum, and A. Aysu.
+        <em>From Predict to Generate: A Cross-Layer Survey of Generative AI for IC Design and Manufacturing.</em>
+        Preprint.
+      </li>
+    </ul>
   </div>
-
 
   <div class="title">
     <a class="title_link" id="exp" href="#exp">Research Experience</a>
   </div>
   <div class="content">
-    Please see my <a href="./research.html#research"> research</a> for more information.
+    I am currently investigating the evaluation and self-improvement of autonomous research agents with advisor Chao Zhang.
+    My research also includes simulation-augmented post-training for analog circuit design, knowledge-boundary awareness, and LLM safety evaluation.
+    Please see my <a href="./research.html#research">research experience</a> for details.
   </div>
 
   <div class="title">
@@ -175,10 +192,23 @@
   </div>
   <div class="content">
     <ul>
-      <li>CS446/ECE449: Machine Learning, Teaching Assistant <div class="float-right">Spring 2026</div></li>
-      <li>MATH285: Introduction to Differential Equations, Teaching Assistant <div class="float-right">Spring 2025</div></li>
-      <li>MATH241: Calculus III, Teaching Assistant <div class="float-right">Fall 2024</div></li>
-      <li>ECE391: Computer Systems Engineering, Course Assistant <div class="float-right">Spring 2024</div></li>
+      <li>ECE484: Principles of Safe Autonomy, Teaching Assistant <div class="float-right">Aug. 2026 - Dec. 2026</div></li>
+      <li>CS446/ECE449: Machine Learning, Teaching Assistant <div class="float-right">Jan. 2026 - May 2026</div></li>
+      <li>MATH285: Introduction to Differential Equations, Teaching Assistant <div class="float-right">Jan. 2025 - Jun. 2025</div></li>
+      <li>MATH241: Calculus III, Teaching Assistant <div class="float-right">Sep. 2024 - Dec. 2024</div></li>
+      <li>ECE391: Computer System Engineering, Course Assistant <div class="float-right">Jan. 2024 - May 2024</div></li>
+    </ul>
+    Please see <a href="./teaching.html#teaching">Teaching and Leadership</a> for details, including my student representative experience.
+  </div>
+
+  <div class="title">
+    <a class="title_link" id="skills" href="#skills">Technical Skills</a>
+  </div>
+  <div class="content">
+    <ul>
+      <li><strong>Programming Languages:</strong> Python, C/C++, CUDA, x86 Assembly, MATLAB.</li>
+      <li><strong>Frameworks &amp; Tools:</strong> PyTorch, Hugging Face Transformers, PEFT/LoRA, DeepSpeed/FSDP, vLLM, verl.</li>
+      <li><strong>Spoken Languages:</strong> English (Proficient), Mandarin (Native), Cantonese (Native).</li>
     </ul>
   </div>
 

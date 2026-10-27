@@ -48,7 +48,7 @@
         <i class="icon icon-th icon-white"></i> &nbsp; Publications
       </a>
       <a class="nav_item" href="./teaching.html#teaching">
-        <i class="icon icon-user icon-white"></i> &nbsp; Teaching / Talks
+        <i class="icon icon-user icon-white"></i> &nbsp; Teaching &amp; Leadership
       </a>
     </div>
   </div>
@@ -80,67 +80,48 @@
     <a class="title_link" id="research" href="#research">Research Experience</a>
   </div>
   <div class="content">
-  <!-- SAFTAC -->
-  <div class="project">
-    <div class="project-title">
-      SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design
-      <span class="location">UIUC, Urbana, IL</span>
+    <div class="project">
+      <div class="project-title">Evaluation and Self-Improvement of Autonomous Research Agents</div>
+      <div class="project-role">Advisor: Chao Zhang <span class="date">Ongoing Research</span></div>
+      <ul class="project-details">
+        <li>Investigating how autonomous research agents can improve their research capabilities through iterative experimentation and feedback.</li>
+        <li>Developing evaluation protocols to assess research outcomes, intermediate decision quality, and the generalizability of agent self-improvement.</li>
+        <li>Exploring hypothesis evaluation and feedback-driven experiment selection to improve the reliability and efficiency of autonomous research.</li>
+      </ul>
     </div>
-    <div class="project-role">
-      Advisor: Huan Zhang
-      <span class="date">2025 - Present</span>
+    <div class="project">
+      <div class="project-title">SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design</div>
+      <div class="project-role">Advisor: Huan Zhang</div>
+      <ul class="project-details">
+        <li>Led the development of SAFTAC, a simulation-augmented post-training framework for specification-conditioned analog circuit generation and feedback-guided correction.</li>
+        <li>Built an automated data curation pipeline integrating LLM annotation, Bayesian optimization, and SPICE simulation, constructing 8,626 design tasks across 10 circuit types.</li>
+        <li>Designed a three-stage SFT curriculum followed by GRPO-based reinforcement fine-tuning, leveraging simulation-grounded rewards to train both circuit generation and feedback-guided correction.</li>
+        <li>Fine-tuned Qwen3-8B, achieving 71.4% single-pass and 78.2% two-pass pass@1, outperforming the strongest closed-source baselines by 15.9 and 7.8 percentage points, respectively.</li>
+        <li><strong>Publication:</strong> Accepted to NeurIPS 2026 Main Conference.</li>
+      </ul>
     </div>
-    <ul class="project-details">
-      <li><strong>Motivation:</strong> This project studies post-training open-source LLMs for specification-conditioned analog circuit design, where models must reason over circuit structure, constraints, and simulation feedback.
-      </li>
-      <li><strong>Result:</strong> We constructed a simulation-grounded dataset of 8,626 design tasks across 10 analog circuit types and fine-tuned Qwen3-8B to achieve 71.4% single-pass pass@1 and 78.2% two-pass pass@1, outperforming strong proprietary and open-source baselines.
-      </li>
-      <li><strong>Contribution:</strong> I led the project design, built the dataset and training pipeline, designed a three-stage SFT curriculum, and implemented a GRPO-based reinforcement fine-tuning pipeline using topology checks, BO-based sizing, and SPICE simulation outcomes as reward signals.
-      </li>
-      <div class="linebreak"></div>
-    </ul>
+    <div class="project">
+      <div class="project-title">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness</div>
+      <div class="project-role">Advisor: Yi R. (May) Fung</div>
+      <ul class="project-details">
+        <li>Led research on LLM confidence estimation and knowledge-boundary awareness in multi-problem settings, covering both independent and sequentially related questions.</li>
+        <li>Proposed MAC-Tuning, a two-stage supervised fine-tuning framework that constructs multi-question QA and confidence data to decouple answer prediction from confidence estimation.</li>
+        <li>Evaluated MAC-Tuning across six benchmarks and multiple LLM families and sizes, improving average precision by up to 25% over baselines while reducing confidence calibration error.</li>
+        <li><strong>Publication:</strong> Accepted to EMNLP 2025 Main Conference.</li>
+        <li><a href="https://github.com/no-touch-fish/Multi-QA-Tuning">GitHub Repository</a> and <a href="https://arxiv.org/abs/2504.21773">Paper</a>.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <div class="project-title">Random Augmentations Cheaply Break LLM Safety Alignment</div>
+      <div class="project-role">Advisor: Gagandeep Singh</div>
+      <ul class="project-details">
+        <li>Investigated the robustness of LLM safety alignment to low-cost random prompt augmentations across 17 models, examining the effects of model size, quantization, fine-tuning-based defenses, and decoding strategies.</li>
+        <li>Implemented character-level perturbations and random string insertion strategies with varying augmentation strengths to evaluate their effectiveness in bypassing safety alignment.</li>
+        <li>Co-designed human-calibrated safety evaluation metrics using 1,220 manually annotated cases, demonstrating that just 25 random augmentations can substantially increase attack success rates on safety-aligned LLMs.</li>
+        <li><a href="https://arxiv.org/abs/2411.02785">Paper</a> (preprint).</li>
+      </ul>
+    </div>
   </div>
-  <!-- MAC-Tuning -->
-  <div class="project">
-    <div class="project-title">
-      MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness
-      <span class="location">Remote</span>
-    </div>
-    <div class="project-role">
-      Advisor: May Fung
-      <span class="date">Jun 2024 - Current</span>
-    </div>
-    <ul class="project-details">
-      <li><strong>Motivation:</strong> Existing evaluations of LLM hallucination mostly focus on single-question settings. This project studies hallucination detection and reasoning when models must answer multiple compositional questions at the same time.
-      </li>
-      <li><strong>Result:</strong> We proposed Multiple Answers and Confidence Stepwise Tuning (<strong>MAC-Tuning</strong>), a fine-tuning method that improves answer precision by an average of 25%. The paper was admitted to EMNLP 2025 Main.
-      </li>
-      <li><strong>Contribution:</strong> I led the data collection and training pipeline, including multi-problem prompt construction, model fine-tuning, and output evaluation. I also designed evaluation metrics including accuracy, AP, and MAP, implemented automatic evaluation with LLM-as-a-judge and keyword-based extraction, and manually verified selected cases for reliability.
-      </li>
-      <li><strong>Link: </strong> <a href="https://github.com/no-touch-fish/Multi-QA-Tuning">Github Repo</a> and <a href="https://arxiv.org/abs/2504.21773">Paper</a>.</li>
-      <div class="linebreak"></div>
-    </ul>
-  </div>
-  <!-- Simple Random Augmentation -->
-  <div class="project">
-    <div class="project-title">
-      Random Augmentations Cheaply Break LLM Safety Alignment
-      <span class="location">UIUC, Urbana, IL</span>
-    </div>
-    <div class="project-role">
-      Advisor: Gagandeep Singh, Jason Vega
-      <span class="date">Jun 2024 - Dec 2024</span>
-    </div>
-    <ul class="project-details">
-      <li><strong>Motivation:</strong> Many jailbreak methods are costly or require substantial manual effort. This project studies whether simple random prompt augmentations can weaken safety alignment in LLMs.
-      </li>
-      <li><strong>Result:</strong> We show that low-resource and unsophisticated attackers can significantly improve their chances of bypassing alignment with just 25 random augmentations per prompt.
-      </li>
-      <li><strong>Contribution:</strong> I implemented and evaluated multiple low-cost input augmentation strategies, including string-level and character-level perturbations. I also helped design the evaluation metrics, manually labeled model outputs, and conducted case studies comparing LLM-based safety classification with human evaluation.</li>
-      <div class="linebreak"></div>
-    </ul>
-  </div>
-</div>
 
   <div class="title">
     <a class="title_link" id="publications" href="#publications">Publications</a>
@@ -148,23 +129,31 @@
 
   <div class="content publications">
     (* denotes equal contribution)
+
     <ul>
       <li>
-          <strong>Junsheng Huang</strong>, Yifan Sun, Zhouer Zhang, Ning Wei, Yening Liu, Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu, Huan Zhang.
-          <em>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design.</em>
-          Manuscript under review.
+        <strong>Junsheng Huang</strong>*, Yifan Sun*, Zhouer Zhang*, Ning Wei, Yening Liu, Michael Molter, Pavan Kumar Hanumolu, Elyse Rosenbaum, Bin Hu, Huan Zhang.
+        <em>SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design.</em>
+        Accepted to <strong>NeurIPS 2026 Main Conference</strong>.
       </li>
       <li>
-          <strong>Junsheng Huang</strong>, Zhitao He, Sandeep Polisetty, May Fung. 
-          <em><a href="https://arxiv.org/abs/2504.21773">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness.</a></em>
-          Accepted to EMNLP 2025 Main.
+        <strong>Junsheng Huang</strong>, Zhitao He, Yuchen Huang, Sandeep Polisetty, Qingyun Wang, Yi R. Fung.
+        <em><a href="https://arxiv.org/abs/2504.21773">MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness.</a></em>
+        Accepted to <strong>EMNLP 2025 Main Conference</strong>.
       </li>
       <li>
-          Jason Vega, <strong>Junsheng Huang</strong>*, Gaokai Zhang*, Hangoo Kang*, Minjia Zhang, Gagandeep Singh. 
-          <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em>
+        Jason Vega, <strong>Junsheng Huang</strong>, Gaokai Zhang, Hangoo Kang, Minjia Zhang, Gagandeep Singh.
+        <em><a href="https://arxiv.org/abs/2411.02785">Stochastic Monkeys at Play: Random Augmentations Cheaply Break LLM Safety Alignment.</a></em>
+        Preprint.
       </li>
-  </ul>
+      <li>
+        W. Yan, Z. Deng, M. Molter, R. Krishna, N. Rouf, S. S. Sofla, E. Thieme, S. Chatterjee, P. P. P. Linn, Y. Wen, X. Xiao, Z. Zhang,
+        <strong>Junsheng Huang</strong>, Y. Liu, Y. Zhou, P. Franzon, M. Swaminathan, E. Rosenbaum, and A. Aysu.
+        <em>From Predict to Generate: A Cross-Layer Survey of Generative AI for IC Design and Manufacturing.</em>
+        Preprint.
+      </li>
+    </ul>
   </div>
-
+</div>
 </body>
 </html>
