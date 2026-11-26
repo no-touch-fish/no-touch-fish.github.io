@@ -1,0 +1,42 @@
+---
+import { profile, template } from '@/settings'
+import ProfileMark from './ProfileMark.astro'
+import SocialIcons from './SocialIcons.astro'
+
+interface Props { hasBlog: boolean }
+
+const { hasBlog } = Astro.props
+const links = [
+	{ path: '/', label: 'Home' },
+	{ path: '/research/', label: 'Research' },
+	{ path: '/papers/', label: 'Publications' },
+	{ path: '/projects/', label: 'Projects & Awards' },
+	{ path: '/teaching/', label: 'Teaching & Leadership' },
+	{ path: '/cv/', label: 'CV' },
+	...(hasBlog ? [{ path: '/blog/1', label: 'Blog' }] : []),
+]
+const currentPath = Astro.url.pathname.replace(/\/$/, '')
+---
+
+<aside class="flex min-h-dvh w-64 flex-col bg-base-200 p-6 text-base-content xl:w-72">
+	<a href={`${template.base}/`} class="my-8 flex flex-col items-center gap-4 text-center">
+		<div class="w-28"><ProfileMark /></div>
+		<span class="text-lg font-bold">{profile.fullName}</span>
+	</a>
+	<nav aria-label="Site navigation">
+		<ul class="menu w-full gap-2">
+			{links.map(({ path, label }) => {
+				const href = template.base + path
+				const active = href.replace(/\/$/, '') === currentPath
+				return (
+					<li>
+						<a href={href} aria-current={active ? 'page' : undefined} class:list={['text-base', { 'menu-active': active }]}>
+							{label}
+						</a>
+					</li>
+				)
+			})}
+		</ul>
+	</nav>
+	<div class="mt-6"><SocialIcons /></div>
+</aside>

@@ -1,0 +1,35 @@
+---
+import { profile, secondaryEmail, social, template } from '@/settings'
+import SocialIcons from './SocialIcons.astro'
+import ProfileMark from './ProfileMark.astro'
+---
+
+<div class="min-w-0 flex-1">
+	<h1 class="mb-3 text-4xl font-bold sm:text-5xl">
+		<span class="text-secondary">{profile.fullName}</span>
+	</h1>
+	<p class="mb-4 text-base-content/70">
+		<span lang="zh">{profile.chineseName}</span> · {profile.pronouns}
+	</p>
+	<p class="mb-4 text-xl font-medium">
+		{profile.title} at <a class="link link-hover" href="https://illinois.edu/">{profile.institute}</a>
+	</p>
+	<p class="mb-3 text-lg">
+		I started my M.S. at UIUC in Fall 2025 and expect to graduate in May 2027.
+		In 2025, I earned dual bachelor’s degrees in Electrical and Computer Engineering from{' '}
+		<a class="link link-hover" href="https://illinois.edu/">UIUC</a>{' '}and{' '}
+		<a class="link link-hover" href="https://www.zju.edu.cn/english/">Zhejiang University</a>.
+	</p>
+	<p class="mb-5 text-lg">I’m seeking Ph.D. opportunities in machine learning, large language models, and autonomous agents.</p>
+	<div class="flex flex-wrap items-center gap-3">
+		<a href={`${template.base}/files/CV.pdf`} download class="btn btn-neutral">Download CV</a>
+		<SocialIcons />
+	</div>
+	<div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+		<a class="link link-hover break-all" href={`mailto:${social.email}`}>{social.email}</a>
+		<a class="link link-hover break-all" href={`mailto:${secondaryEmail}`}>{secondaryEmail}</a>
+	</div>
+</div>
+<div class="hidden w-36 shrink-0 sm:block xl:w-48">
+	<ProfileMark />
+</div>
