@@ -35,8 +35,6 @@ export const social = {
 	orcid: '',
 }
 
-export const secondaryEmail = 'junsheng.21@intl.zju.edu.cn'
-
 export const template = {
 	website_url: 'https://no-touch-fish.github.io',
 	menu_left: false,
