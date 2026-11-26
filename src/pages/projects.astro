@@ -1,0 +1,128 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ExperienceCard from '@/components/ui/ExperienceCard.astro'
+---
+
+<Layout title="Projects &amp; Awards | Junsheng Huang">
+	<div>
+		<h1 id="projects" class="mb-8 text-3xl font-bold">Projects</h1>
+		<div class="space-y-5">
+			<div id="opd">
+				<ExperienceCard
+					title={"Outcome-Conditioned On-Policy Distillation for Multi-Step LLM Agents"}
+					role={"Ongoing research"}
+				>
+					<ul>
+						<li><strong>Goal:</strong> Investigating how to transfer multi-step decision-making capabilities from strong teacher models to smaller, cost-efficient agents through on-policy distillation (OPD), where students learn from teacher supervision on their own interaction trajectories.</li>
+						<li><strong>Supervision Allocation:</strong> Developing an outcome-conditioned framework that separates successful and failed trajectories, allocates a limited supervision budget between them, and selects informative interaction turns and tokens for distillation.</li>
+						<li><strong>Selection Strategy:</strong> Studying teacher-student disagreement and interaction position to reinforce effective behavior in successful trajectories and prioritize corrective supervision in failed trajectories, while reducing emphasis on downstream deviations caused by accumulated errors.</li>
+						<li><strong>Evaluation:</strong> Evaluating the approach on ALFWorld and WebShop across teacher-student configurations through budget-matched baseline comparisons, component ablations, and trajectory-level analyses.</li>
+					</ul>
+				</ExperienceCard>
+			</div>
+
+			<ExperienceCard
+				title={"CS598HT: Consistency-Aware Graph Memory for Training-Free VLM Test-Time Adaptation"}
+				metadata={["Urbana, IL", "Spring 2026"]}
+				role={"Member of a three-person team"}
+			>
+				<ul>
+					<li><strong>Framework:</strong> Proposed CAGM, a training-free test-time adaptation framework for vision-language models that combines dynamic memory with graph-based label propagation.</li>
+					<li><strong>Consistency Score:</strong> Designed a Jensen-Shannon-divergence-based consistency score to measure agreement between zero-shot CLIP predictions and label-propagation predictions.</li>
+					<li><strong>Adaptive Mechanism:</strong> Used the consistency score as a memory update gate, label-propagation edge weight, and adaptive prediction interpolation coefficient to reduce noisy pseudo-label propagation.</li>
+					<li><strong>Evaluation:</strong> Implemented the full adaptation pipeline and evaluated the method on standard OOD and cross-domain benchmarks against recent memory- and graph-based TTA baselines.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"CS543: Where Do Modern Monocular Depth Models Fail? A Cross-Domain Robustness Study"}
+				metadata={["Urbana, IL", "Spring 2026"]}
+				role={"Member of a three-person team"}
+			>
+				<ul>
+					<li><strong>Evaluation Pipeline:</strong> Built a unified evaluation pipeline to study the robustness of modern monocular depth estimation models under domain shifts such as low light, transparent objects, and scene variation.</li>
+					<li><strong>Model Setup:</strong> Set up and ran pretrained Depth Anything V2 and ZoeDepth models, including baseline inference and depth-map visualization.</li>
+					<li><strong>Benchmarking:</strong> Compared Depth Anything V2, ZoeDepth, and Marigold using synthetic RGB-D samples with known ground-truth depth, and computed affine-aligned AbsRel as an initial sanity-check metric.</li>
+					<li><strong>Analysis:</strong> Analyzed failure patterns across different visual conditions, showing that transparent and specular objects are consistently challenging for all three models.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"CS546: Strategic Persuasion in LLMs: Multi-Turn Dialogue with Reinforcement Learning"}
+				metadata={["Urbana, IL", "Fall 2025"]}
+				role={"Member of a six-person team"}
+			>
+				<ul>
+					<li><strong>Agent Design:</strong> Developed a planner-persuader LLM agent for multi-turn strategic persuasion, decoupling high-level persuasion strategy selection from natural language response generation.</li>
+					<li><strong>RL Fine-Tuning:</strong> Fine-tuned Qwen3-4B-Instruct-2507 with GRPO using the rllm framework to improve strategy adaptation across dialogue turns.</li>
+					<li><strong>Reward Design:</strong> Designed a composite RL reward integrating XML-format compliance, length control, strategy-following accuracy, and normalized attitude-shift improvement.</li>
+					<li><strong>Evaluation:</strong> Conducted multi-model evaluation against GPT-4o, Qwen3-4B, Qwen2.5-7B, and LLaMA3.1-8B-Instruct persuadees, and analyzed how persuasion performance changes with conversation length.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"Federated Knowledge-Augmented Generation"}
+				metadata={["ZJU-UIUC Institute, China", "Spring 2025"]}
+				role={"Advisor: Qiang Zhang"}
+			>
+				<ul>
+					<li><strong>Goal:</strong> Built a privacy-preserving and personalized text generation framework by combining federated learning with knowledge-augmented generation.</li>
+					<li><strong>Method:</strong> Designed a federated KAG pipeline that enables distributed training across clients without sharing raw data, while using retrieval-augmented knowledge to improve generation quality.</li>
+					<li><strong>Contribution:</strong> Collected data, built the project codebase based on LightRAG, and implemented the core training and generation pipeline.</li>
+					<li><strong>Link:</strong> <a href="https://github.com/no-touch-fish/FKAG">Github Repo</a>.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"ECE445: Senior Design Laboratory"}
+				metadata={["ZJU-UIUC Institute, China", "Spring 2025"]}
+				role={"Member of a four-person team"}
+			>
+				<ul>
+					<li><strong>Goal:</strong> Built a language-guided robotic grasping system that identifies and grasps target objects from spoken instructions.</li>
+					<li><strong>Automatic Speech Recognition:</strong> Translated spoken instructions into text and extracted the target object label using Wave2Vec 2.0 followed by an NLP model.</li>
+					<li><strong>Computer Vision:</strong> Used RGB images from the depth camera to detect the target object and estimate its pixel-level bounding box with YOLOE-V8L.</li>
+					<li><strong>6D Pose Estimation:</strong> Combined RGB and depth images to estimate the target object's 6D pose, including [x, y, z] coordinates and three Euler angles, using Open3D.</li>
+					<li><strong>Motion Planning:</strong> Used the estimated 6D pose to choose an appropriate grasping position and map it to motor destination angles.</li>
+					<li><strong>PCB Display:</strong> Display the name of the target object on a 0.96-inch OLED screen.</li>
+					<li><a href="https://github.com/FFFFFFFANG1/ST_agent">Code</a> and <a href="/files/ECE445_final_report.pdf" download>report</a> are available here.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"ECE408: CUDA Optimization for LeNet"}
+				metadata={["Urbana, IL", "Fall 2024"]}
+				role={"Individual project"}
+			>
+				<ul>
+					<li><strong>Streaming:</strong> Overlapped data transfer with kernel execution by dividing large vectors into segments and running kernels while copying data between device and host memory.</li>
+					<li><strong>Kernel Fusion:</strong> Implemented convolution with matrix multiplication using three kernels, then fused them into a single kernel to reduce overhead and improve performance.</li>
+					<li><strong>High-Level Libraries:</strong> Used Tensor Cores through Warp Matrix Functions and the cuBLAS library.</li>
+					<li><strong>Other Optimizations:</strong> Applied constant memory for weights, the <code>__restrict__</code> keyword, and loop unrolling.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard
+				title={"ECE391: 391 OS System"}
+				metadata={["Urbana, IL", "Fall 2023"]}
+				role={"Member of a four-person team"}
+			>
+				<ul>
+					<li><strong>Basic Functionalities:</strong> Implemented an operating system supporting scheduling, interrupts, system calls, exceptions, and file systems.</li>
+					<li><strong>Self-Designed Features:</strong> Added ATA drivers for a writable file system, command history, customizable colors, and autocomplete.</li>
+					<li><strong>Systems Programming:</strong> Built the kernel and device-driver stack in C and x86, including paging, interrupt handling, terminal support, and course-provided machine problem interfaces.</li>
+					<li><a href="https://github.com/no-touch-fish/ECE391">Project repository</a>.</li>
+				</ul>
+			</ExperienceCard>
+		</div>
+		<section id="awards" class="my-10">
+			<h2 class="mb-6 text-2xl font-bold">Awards</h2>
+			<ul class="space-y-4 rounded-box bg-base-200 p-5 sm:p-6">
+				<li class="flex flex-wrap justify-between gap-x-4 gap-y-1"><span>Honorable Mention, Mathematical Contest of Modeling (MCM)</span><span class="text-sm text-base-content/75">May 2023</span></li>
+				<li class="flex flex-wrap justify-between gap-x-4 gap-y-1"><span>ZJU-UIUC Institute Dean's List</span><span class="text-sm text-base-content/75">Sophomore Year</span></li>
+				<li class="flex flex-wrap justify-between gap-x-4 gap-y-1"><span>ZJU-UIUC Institute Third-Class Academic Excellence Award</span><span class="text-sm text-base-content/75">Sophomore and Junior Years</span></li>
+				<li class="flex flex-wrap justify-between gap-x-4 gap-y-1"><span>UIUC Grainger Engineering Department Dean's List</span><span class="text-sm text-base-content/75">Junior Year</span></li>
+			</ul>
+		</section>
+	</div>
+</Layout>

@@ -1,0 +1,84 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { profile, social, template } from '@/settings'
+import { education, publications } from '@/data/cv'
+import { news } from '@/data/news'
+import Hero from '@/components/ui/Hero.astro'
+import Grid from '@/components/ui/Grid.astro'
+import ArticleList from '@/components/ui/ArticleList.astro'
+
+const sections = [
+	{ id: 'exp', title: 'Research Experience', href: '/research/' },
+	{ id: 'projects', title: 'Projects & Awards', href: '/projects/' },
+	{ id: 'teaching', title: 'Teaching & Leadership', href: '/teaching/' },
+]
+---
+
+<Layout>
+	<section id="bio" class="flex items-center gap-8 border-b border-base-300 pb-12">
+		<Hero />
+	</section>
+
+	<section id="interest" class="border-b border-base-300 py-12">
+		<p class="mb-6 text-lg">My research focuses on how LLMs and autonomous agents can learn and improve from feedback and experience.</p>
+		<Grid gridTitle="Research Areas" gridItems={profile.research_areas} />
+	</section>
+
+	<section id="publications" class="border-b border-base-300 py-12">
+		<ArticleList listTitle="Recent Publications" listItems={publications} />
+		<a class="link link-hover mt-6 inline-block font-medium" href={`${template.base}/papers/`}>All publications</a>
+	</section>
+
+	<div class="grid gap-10 border-b border-base-300 py-12 xl:grid-cols-[1fr_1.2fr]">
+		<section id="education">
+			<h2 class="mb-6 text-2xl font-bold">Education</h2>
+			<ul class="space-y-6">
+				{education.map((item) => (
+					<li>
+						<h3 class="font-semibold">{item.degree}</h3>
+						<p>{item.school}</p>
+						<p class="mt-1 text-sm text-base-content/75">{item.time}</p>
+						{item.description && <p class="mt-1 text-sm text-base-content/75">{item.description}</p>}
+					</li>
+				))}
+			</ul>
+		</section>
+		<section id="news">
+			<h2 class="mb-6 text-2xl font-bold">News</h2>
+			<ul class="space-y-4">
+				{news.map(({ date, label, text, link }) => (
+					<li class="grid gap-1 sm:grid-cols-[6rem_1fr]">
+						<time datetime={date} class="text-sm font-medium text-base-content/75">{label}</time>
+						{link ? <a href={link} class="link link-hover">{text}</a> : <span>{text}</span>}
+					</li>
+				))}
+			</ul>
+		</section>
+	</div>
+
+	<div class="flex flex-wrap gap-3 border-b border-base-300 py-8">
+		{sections.map(({ id, title, href }) => (
+			<a id={id} href={template.base + href} class="btn btn-outline">{title}</a>
+		))}
+	</div>
+
+	<section id="skills" class="border-b border-base-300 py-8">
+		<h2 class="mb-4 text-2xl font-bold">Technical Skills</h2>
+		<ul class="space-y-2">
+			<li><strong>Programming Languages:</strong> Python, C/C++, CUDA, x86 Assembly, MATLAB.</li>
+			<li><strong>Frameworks &amp; Tools:</strong> PyTorch, Hugging Face Transformers, PEFT/LoRA, DeepSpeed/FSDP, vLLM, verl.</li>
+			<li><strong>Spoken Languages:</strong> English (Proficient), Mandarin (Native), Cantonese (Native).</li>
+		</ul>
+	</section>
+
+	<div class="grid gap-8 py-10 sm:grid-cols-2">
+		<section id="collaboration">
+			<h2 class="mb-3 text-xl font-bold">Collaboration</h2>
+			<p>If you’re interested in collaborating, feel free to <a class="link" href={`mailto:${social.email}`}>email me</a>.</p>
+		</section>
+		<section id="mis">
+			<h2 class="mb-3 text-xl font-bold">Beyond Research</h2>
+			<p>I enjoy basketball, table tennis, billiards, and boxing.</p>
+		</section>
+	</div>
+</Layout>

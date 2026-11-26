@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { publications } from '@/data/cv'
+import { profile } from '@/settings'
+---
+
+<Layout title="Publications | Junsheng Huang">
+	<div id="publications">
+		<h1 class="mb-3 text-3xl font-bold">Publications</h1>
+		<p class="mb-8 text-sm text-base-content/75">* denotes equal contribution.</p>
+
+		<div class="space-y-6">
+			{publications.map((paper, index) => (
+				<article id={`paper-${index + 1}`} class="card scroll-mt-8 bg-base-200">
+					<div class="card-body p-5 sm:p-7">
+						<h2 class="card-title text-xl">{paper.title}</h2>
+						<p class="text-base">
+							{paper.authors.split(', ').map((author, authorIndex) => (
+								<>{authorIndex > 0 && ', '}{author.replace(/\*$/, '') === profile.author_name ? <strong>{author}</strong> : author}</>
+							))}
+						</p>
+						<p class="text-sm font-medium text-base-content/75">{[paper.journal, paper.time].filter(Boolean).join(' · ')}</p>
+						{paper.abstract && <p class="mt-2 text-base">{paper.abstract}</p>}
+						{paper.link && <div class="card-actions mt-3"><a href={paper.link} class="btn btn-sm btn-neutral">Read paper</a></div>}
+					</div>
+				</article>
+			))}
+		</div>
+	</div>
+</Layout>

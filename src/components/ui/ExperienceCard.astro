@@ -1,0 +1,16 @@
+---
+interface Props {
+	title: string
+	metadata?: string[]
+	role?: string
+}
+
+const { title, metadata = [], role } = Astro.props
+---
+
+<article class="rounded-box bg-base-200 p-5 sm:p-6">
+	<h2 class="text-xl font-semibold">{title}</h2>
+	{metadata.length > 0 && <p class="mt-1 text-sm text-base-content/75">{metadata.join(' · ')}</p>}
+	{role && <p class="mt-2 font-medium">{role}</p>}
+	<div class="mt-4 [&_a]:link [&_li]:my-1 [&_ul]:list-disc [&_ul]:pl-5"><slot /></div>
+</article>

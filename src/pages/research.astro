@@ -1,0 +1,68 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ExperienceCard from '@/components/ui/ExperienceCard.astro'
+---
+
+<Layout title="Research | Junsheng Huang">
+	<div>
+		<h1 class="mb-5 text-3xl font-bold">Research</h1>
+		<p class="mb-8 max-w-3xl text-lg">
+			I study how LLMs and autonomous research agents can learn and improve from feedback and experience.
+			My work also spans simulation-augmented post-training for analog circuit design, knowledge-boundary awareness, and LLM safety evaluation.
+		</p>
+		<section id="research" class="mb-10">
+			<h2 class="mb-6 text-2xl font-bold">Research Experience</h2>
+			<div class="space-y-5">
+				<ExperienceCard
+					title={"Evaluation and Self-Improvement of Autonomous Research Agents"}
+					metadata={["Ongoing Research"]}
+					role={"Advisor: Chao Zhang"}
+				>
+					<ul>
+						<li>Investigating how autonomous research agents can improve their research capabilities through iterative experimentation and feedback.</li>
+						<li>Developing evaluation protocols to assess research outcomes, intermediate decision quality, and the generalizability of agent self-improvement.</li>
+						<li>Exploring hypothesis evaluation and feedback-driven experiment selection to improve the reliability and efficiency of autonomous research.</li>
+					</ul>
+				</ExperienceCard>
+
+				<ExperienceCard
+					title={"SAFTAC: Simulation-Augmented Fine-Tuning of Open-Source LLMs for Analog Circuit Design"}
+					role={"Advisor: Huan Zhang"}
+				>
+					<ul>
+						<li>Led the development of SAFTAC, a simulation-augmented post-training framework for specification-conditioned analog circuit generation and feedback-guided correction.</li>
+						<li>Built an automated data curation pipeline integrating LLM annotation, Bayesian optimization, and SPICE simulation, constructing 8,626 design tasks across 10 circuit types.</li>
+						<li>Designed a three-stage SFT curriculum followed by GRPO-based reinforcement fine-tuning, leveraging simulation-grounded rewards to train both circuit generation and feedback-guided correction.</li>
+						<li>Fine-tuned Qwen3-8B, achieving 71.4% single-pass and 78.2% two-pass pass@1, outperforming the strongest closed-source baselines by 15.9 and 7.8 percentage points, respectively.</li>
+						<li><strong>Publication:</strong> Accepted to NeurIPS 2026 Main Conference.</li>
+					</ul>
+				</ExperienceCard>
+
+				<ExperienceCard
+					title={"MAC-Tuning: LLM Multi-Compositional Problem Reasoning with Enhanced Knowledge Boundary Awareness"}
+					role={"Advisor: Yi R. (May) Fung"}
+				>
+					<ul>
+						<li>Led research on LLM confidence estimation and knowledge-boundary awareness in multi-problem settings, covering both independent and sequentially related questions.</li>
+						<li>Proposed MAC-Tuning, a two-stage supervised fine-tuning framework that constructs multi-question QA and confidence data to decouple answer prediction from confidence estimation.</li>
+						<li>Evaluated MAC-Tuning across six benchmarks and multiple LLM families and sizes, improving average precision by up to 25% over baselines while reducing confidence calibration error.</li>
+						<li><strong>Publication:</strong> Accepted to EMNLP 2025 Main Conference.</li>
+						<li><a href="https://github.com/no-touch-fish/Multi-QA-Tuning">GitHub Repository</a> and <a href="https://arxiv.org/abs/2504.21773">Paper</a>.</li>
+					</ul>
+				</ExperienceCard>
+
+				<ExperienceCard
+					title={"Random Augmentations Cheaply Break LLM Safety Alignment"}
+					role={"Advisor: Gagandeep Singh"}
+				>
+					<ul>
+						<li>Investigated the robustness of LLM safety alignment to low-cost random prompt augmentations across 17 models, examining the effects of model size, quantization, fine-tuning-based defenses, and decoding strategies.</li>
+						<li>Implemented character-level perturbations and random string insertion strategies with varying augmentation strengths to evaluate their effectiveness in bypassing safety alignment.</li>
+						<li>Co-designed human-calibrated safety evaluation metrics using 1,220 manually annotated cases, demonstrating that just 25 random augmentations can substantially increase attack success rates on safety-aligned LLMs.</li>
+						<li><a href="https://arxiv.org/abs/2411.02785">Paper</a> (preprint).</li>
+					</ul>
+				</ExperienceCard>
+			</div>
+		</section>
+	</div>
+</Layout>

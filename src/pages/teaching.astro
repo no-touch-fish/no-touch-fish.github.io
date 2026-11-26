@@ -1,0 +1,53 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ExperienceCard from '@/components/ui/ExperienceCard.astro'
+---
+
+<Layout title="Teaching &amp; Leadership | Junsheng Huang">
+	<div id="teaching" class="mb-10">
+		<h1 class="mb-8 text-3xl font-bold">Teaching Experience</h1>
+		<div class="space-y-5">
+			<ExperienceCard title="Teaching Assistant in ECE484: Principles of Safe Autonomy" metadata={['University of Illinois Urbana-Champaign', 'Aug. 2026 – Dec. 2026']}>
+				<p>Course Website: <a href="https://safeautonomy-illinois.github.io/ece484-site/">ECE484 Fall 2026</a></p>
+			</ExperienceCard>
+
+			<ExperienceCard title={"Teaching Assistant in CS446/ECE449: Machine Learning"} metadata={["University of Illinois Urbana-Champaign", "Jan. 2026 – May 2026"]}>
+				<ul>
+					<li>Held weekly office hours to help students understand machine learning concepts and course material.</li>
+					<li>Supported course operations including answering student questions and grading.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard title={"Teaching Assistant in MATH285: Introduction to Differential Equations"} metadata={["ZJU-UIUC Institute", "Jan. 2025 – Jun. 2025"]}>
+				<p>Instructor: Thomas Honold</p>
+				<ul>
+					<li>Held weekly office hours and discussion sections to help students understand course concepts.</li>
+					<li>Graded homework, lab reports, and exams.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard title={"Teaching Assistant in MATH241: Calculus III"} metadata={["ZJU-UIUC Institute", "Sep. 2024 – Dec. 2024"]}>
+				<p>Instructor: Thomas Honold</p>
+				<ul>
+					<li>Held weekly office hours and discussion sections to help students understand course concepts.</li>
+					<li>Graded homework, lab reports, and exams.</li>
+				</ul>
+			</ExperienceCard>
+
+			<ExperienceCard title={"Course Assistant in ECE391: Computer System Engineering"} metadata={["UIUC", "Jan. 2024 – May 2024"]}>
+				<p>Instructor: Kirill Levchenko, Dong Kai Wang</p>
+				<p>Course Website: <a href="https://courses.grainger.illinois.edu/ECE391/sp2024/">ECE391_SP2024</a></p>
+				<ul>
+					<li>Held weekly office hours to help students debug their final project, a small operating system.</li>
+					<li>Checked machine problem demos and graded exams.</li>
+				</ul>
+			</ExperienceCard>
+		</div>
+	</div>
+	<section id="leadership" class="mb-10">
+		<h2 class="mb-6 text-2xl font-bold">Leadership</h2>
+		<ExperienceCard title="Student Representative for the ECE Major" metadata={['ZJU-UIUC Institute']}>
+			<p>Sep. 2021 – Jun. 2022 and Sep. 2024 – Jun. 2025</p>
+		</ExperienceCard>
+	</section>
+</Layout>
